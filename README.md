@@ -20,7 +20,7 @@ a silly brazilian pixel artist, nerdy web dev and collector of weird consoles :3
 
 ---
 
-### 💭 wanting to learn (in the future):
+### 💭 willing to learn (in the future):
 
 ![Lua](https://img.shields.io/badge/Lua-2C2D72?style=for-the-badge&logo=lua&logoColor=white)
 ![Luau](https://img.shields.io/badge/Luau-000000?style=for-the-badge&logo=roblox&logoColor=white)
