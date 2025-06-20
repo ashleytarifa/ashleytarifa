@@ -6,7 +6,7 @@ a silly brazilian pixel artist, nerdy web dev and collector of weird consoles :3
 🌸 i love making cute retro sites, drawing for fun, and diving into indie games  
 🎮 favs: celeste, deltarune, hotline miami, retro classics, and other nerdy stuff  
 🎧 into breakcore, vocaloid, and frutiger aero aesthetics  
-⚡ any pronouns, go crazy
+⭐ she/her pronouns
 
 ---
 
@@ -49,7 +49,3 @@ a silly brazilian pixel artist, nerdy web dev and collector of weird consoles :3
 ---
 
 > silly but happy to be here ₍ᐢ. ̫.ᐢ₎
-<!---
-ashleytarifa/ashleytarifa is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
