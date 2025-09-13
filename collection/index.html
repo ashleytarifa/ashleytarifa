@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>collections ☆</title>
+    <link rel="stylesheet" type="text/css" href="../ash.css" media="screen" />
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <script>NekoType = "white"</script>
+    <h1 id=nl>
+        <script src="https://webneko.net/n20171213.js"></script><a href="https://webneko.net">Neko</a>
+    </h1>
+    <div class="sidebar">
+        collections
+    </div>
+      <button class="button-back" onclick="history.back()">go back</button>
+
+    <div class="container">
+        <div class="top-card">
+            <h1>collections</h1>
+        </div>
+
+        <div class="tags">
+            <p>as you saw before, i collect old tech stuff (specially consoles), and i would like to show you my
+                collection so far!</p>
+        </div>
+
+        <div class="tags">
+            <img class="art-pin collection" src="../images/collection.jpg">
+            <p>game collection</p>
+        </div>
+
+        <div class="tags">
+            <p>about the game collection:</p>
+            <ul class="aboutme-list">
+                <li>5 TV consoles</li>
+                <li>4 portable consoles</li>
+                <li>20 physical games</li>
+                <li>9 controllers (not counting the wii nunchuk)</li>
+        </div>
+        
+        <div class="smedia-card">
+      <h2>more soon :3</h2>
+      </div>
+        <!-- Zoom modal -->
+        <div class="zoom-overlay" id="zoomOverlay">
+            <img src="" alt="Zoomed Collection" id="zoomImage">
+        </div>
+
+
+        <canvas id="starCanvas"></canvas>
+        <script src="../stars.js"></script>
+        <script>
+            const zoomOverlay = document.getElementById('zoomOverlay');
+            const zoomImage = document.getElementById('zoomImage');
+
+            document.querySelectorAll('.art-pin').forEach(img => {
+                img.addEventListener('click', () => {
+                    zoomImage.src = img.src;
+                    zoomOverlay.classList.add('active');
+                });
+            });
+
+            zoomOverlay.addEventListener('click', () => {
+                zoomOverlay.classList.remove('active');
+            });
+        </script>
+
+</body>
+
+</html>

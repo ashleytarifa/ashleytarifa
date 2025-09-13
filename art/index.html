@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>art corkboard ☆</title>
+  <link rel="stylesheet" type="text/css" href="../ash.css" media="screen" />
+  <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+  <script>NekoType="white"</script>
+    <h1 id=nl><script src="https://webneko.net/n20171213.js"></script><a href="https://webneko.net">Neko</a></h1>
+  <div class="sidebar">
+    art corkboard
+  </div>
+
+  <button class="button-back" onclick="history.back()">go back</button>
+
+  <div class="container">
+    <div class="top-card">
+      <h1>art corkboard</h1>
+    </div>
+    <div class="tags">
+      <p>some of the pixel arts i made so far<br>
+        click on the art to zoom in!</p>
+    </div>
+    <div class="corkboard">
+      <div class="art-pin" >
+        <div class="pin-circle"></div>
+        <img src="../images/art/liquidtaxart_1.png" alt="liquidtaxart1"/>
+      </div>
+
+      <div class="art-pin">
+        <div class="pin-circle"></div>
+        <img src="../images/art/liquidtaxart_2.png" alt="liquidtaxart2"/>
+      </div>
+
+      <div class="art-pin">
+        <div class="pin-circle"></div>
+        <img src="../images/art/liquidtaxart_3.png" alt="liquidtaxart3"/>
+      </div>
+
+      <div class="art-pin">
+        <div class="pin-circle"></div>
+        <img src="../images/art/liquidtaxart_4.png" alt="liquidtaxart4"/>
+      </div>
+
+      <div class="art-pin">
+        <div class="pin-circle"></div>
+        <img src="../images/art/liquidtaxart_5.png" alt="liquidtaxart5"/>
+      </div>
+
+      <div class="art-pin">
+        <div class="pin-circle"></div>
+        <img src="../images/art/liquidtaxart_6.png" alt="liquidtaxart6"/>
+      </div>
+
+      <div class="art-pin">
+        <div class="pin-circle"></div>
+        <img src="../images/art/liquidtaxart_7.png" alt="liquidtaxart7"/>
+      </div>
+
+      <div class="art-pin">
+        <div class="pin-circle"></div>
+        <img src="../images/art/liquidtaxart_8.png" alt="liquidtaxart8"/>
+      </div>
+    
+    </div>
+    
+    <!-- Zoom modal -->
+    <div class="zoom-overlay" id="zoomOverlay">
+      <img src="" alt="Zoomed Art" id="zoomImage">
+    </div>
+    
+    <div style="height: 30px; opacity: 0;">.</div>
+  </div>
+  <canvas id="starCanvas"></canvas>
+  <script src="../stars.js"></script>
+  <script>
+    const zoomOverlay = document.getElementById('zoomOverlay');
+    const zoomImage = document.getElementById('zoomImage');
+  
+    document.querySelectorAll('.art-pin img').forEach(img => {
+      img.addEventListener('click', () => {
+        zoomImage.src = img.src;
+        zoomOverlay.classList.add('active');
+      });
+    });
+  
+    zoomOverlay.addEventListener('click', () => {
+      zoomOverlay.classList.remove('active');
+    });
+  </script>
+  
+</body>
+
+</html>
