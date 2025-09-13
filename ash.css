@@ -1,0 +1,434 @@
+@font-face {
+  font-family: 'Pixeloid Sans';
+  src: url(font/PixeloidSans-mLxMm.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --text: #542e51;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Pixeloid Sans', 'Poppins', sans-serif;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 2rem;
+  background-image: linear-gradient(to bottom, #000000, #2e0641);
+  background-attachment: fixed;
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  align-items: stretch;
+}
+
+/* ===== Layout ===== */
+.sidebar {
+  background-color: #dcc2f9;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 10px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  border-right: 2px dashed #ab7ecf;
+  font-size: 14px;
+  z-index: 10;
+  flex-shrink: 0;
+}
+
+.container {
+  flex: 1;
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 40px 20px;
+}
+
+/* ===== Cards ===== */
+.top-card,
+.smedia-card,
+.full-card {
+  background-color: #dcc2f9;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.card, 
+.idle-card, 
+.tags {
+  background-color: #dbc2f8;
+  border-radius: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  padding: 1.5rem;
+  min-width: 250px;
+}
+
+.card { width: 280px; }
+.idle-card { width: 400px; }
+
+.card:hover, 
+.idle-card:hover, 
+.tags:hover {
+  transform: scale(1.03);
+}
+
+.tags {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.collection {
+  width: 100%;
+}
+/* ===== Profile Card ===== */
+.profile-card {
+  position: relative;
+  background: #d6b9f2;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  text-align: center;
+  min-height: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-pic {
+  position: absolute;
+  right: 1.5rem;
+  top: 1.5rem;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 3px solid #a66dd2;
+  object-fit: cover; 
+}
+
+.profile-card h1 {
+  margin-bottom: 0.5rem;
+  font-size: 1.8rem;
+}
+
+.profile-card p {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.button-back {
+  border: 2px dashed #ab7ecf;
+  color: var(--text);
+  font-size: 16px;
+  background-color: #dbc2f8;
+  margin: 1em 1em 1em 2.5em;
+  border-radius: 15px;
+  height: 40px;
+  width: 90px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.button-back:hover,
+.botao-social:hover {
+  transform: scale(1.03);
+}
+
+.botao-social {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: var(--text);
+  border: 2px dashed #b27ddb;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.botao-social:hover {
+  background-color: #e9c7ff;
+}
+
+.bottom-cards a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.bottom-cards a:hover {
+  color: var(--text);
+  text-decoration: none;
+}
+
+/* ===== Grids ===== */
+.bottom-cards,
+.projects-grid,
+.main-idle {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+/* ===== Projects ===== */
+.projects-section {
+  margin-top: 3rem;
+  padding: 2rem;
+  color: var(--text);
+}
+
+.projects-title {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #dbc2f8;
+}
+
+.flip-card {
+  background: transparent;
+  width: 80%;
+  max-width: 400px;
+  height: 350px;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.flip-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  border-radius: 15px;
+}
+
+.flip-card.flipped .flip-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-front,
+.flip-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background-color: #dbc2f8;
+  border-radius: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.flip-front {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.flip-back {
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.project-thumbnail {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.project-link {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #6a1caf;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* ===== Art Gallery ===== */
+.corkboard {
+  background: url('images/cork-texture.jpeg');
+  border: 12px solid #8B5A2B;
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.art-pin {
+  position: relative;
+  display: inline-block;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.art-pin:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.art-pin img {
+  width: 220px;
+  border: 10px solid white;
+  border-radius: 8px;
+  display: block;
+}
+
+.pin-circle {
+  width: 20px;
+  height: 20px;
+  background-color: #e43c3c;
+  border-radius: 50%;
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* ===== Utilities ===== */
+#starCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: transparent;
+  pointer-events: none;
+}
+
+.zoom-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.zoom-overlay.active {
+  display: flex;
+}
+
+.zoom-overlay img {
+  max-width: 90vw;
+  max-height: 90vh;
+  border: 8px solid white;
+  border-radius: 8px;
+}
+
+/* ===== Mobile ===== */
+@media screen and (max-width: 768px) {
+  html, body {
+    max-width: 100vw;
+    overflow-x: hidden;
+    padding: 0;
+  }
+
+  body {
+    padding: 10px;
+    font-size: 0.95rem;
+  }
+
+  .container {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .sidebar,
+  .button-back {
+    display: none;
+  }
+
+  .profile-card {
+    padding: 1.5rem 1.5rem 80px; /* Extra space at bottom */
+    text-align: center;
+  }
+  
+  .profile-pic {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    top: auto;
+    right: auto;
+    transform: translateX(-50%);
+  }
+  
+  .top-card,
+  .smedia-card,
+  .tags,
+  .profile-card,
+  .card,
+  .idle-card,
+  .full-card {
+    width: 100%;
+    max-width: 100%;
+    margin: 10px 0;
+    padding: 1.5rem;
+  }
+
+  .flip-card {
+    width: 100%;
+    max-width: 100%;
+    margin: 10px 0;
+    padding: 0.5rem;
+  }
+
+  .profile-pic {
+    position: relative;
+    right: auto;
+    margin: 0 auto 1rem;
+  }
+
+  .corkboard {
+    padding: 12px;
+    gap: 12px;
+  }
+
+  .art-pin img {
+    width: 100%;
+    max-width: 180px;
+  }
+
+  .flip-card,
+  .flip-inner {
+    height: auto;
+    min-height: 350px;
+  }
+}
