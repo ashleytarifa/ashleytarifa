@@ -6,7 +6,9 @@
 }
 
 :root {
-  --text: #542e51;
+  --text: #d8d8d8;
+  --bg: rgba(46, 26, 58, 0.5);
+  --border: #6b1cff;
 }
 
 * {
@@ -32,9 +34,27 @@ body {
   align-items: stretch;
 }
 
+#bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    pointer-events: none;
+}
+
+footer {
+  text-align: center;
+  color: #ffffff;
+  font-size: 14px;
+  margin-top: 40px;
+  opacity: 0.7;
+}
+
 /* ===== Layout ===== */
 .sidebar {
-  background-color: #dcc2f9;
+  background-color: var(--bg);
   position: fixed;
   top: 0;
   left: 0;
@@ -69,9 +89,9 @@ body {
 .top-card,
 .smedia-card,
 .full-card {
-  background-color: #dcc2f9;
+  background-color: var(--bg);
+  border: 2px solid #6b1cff;
   padding: 2rem;
-  border-radius: 20px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
@@ -79,9 +99,8 @@ body {
 .card, 
 .idle-card, 
 .tags {
-  background-color: #dbc2f8;
-  border-radius: 15px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background-color: var(--bg);
+  border: 2px solid #6b1cff;
   text-align: center;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   padding: 1.5rem;
@@ -108,9 +127,9 @@ body {
 /* ===== Profile Card ===== */
 .profile-card {
   position: relative;
-  background: #d6b9f2;
+  background-color: var(--bg);
+  border: 2px solid #6b1cff;;
   padding: 1.5rem;
-  border-radius: 1rem;
   text-align: center;
   min-height: 160px;
   display: flex;
@@ -141,12 +160,11 @@ body {
 }
 
 .button-back {
-  border: 2px dashed #ab7ecf;
+  border: 2px dashed var(--border);
   color: var(--text);
   font-size: 16px;
-  background-color: #dbc2f8;
+  background-color: var(--bg);
   margin: 1em 1em 1em 2.5em;
-  border-radius: 15px;
   height: 40px;
   width: 90px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -161,7 +179,6 @@ body {
 .botao-social {
   display: inline-block;
   padding: 10px 20px;
-  border-radius: 10px;
   color: var(--text);
   border: 2px dashed #b27ddb;
   text-decoration: none;
@@ -169,7 +186,7 @@ body {
 }
 
 .botao-social:hover {
-  background-color: #e9c7ff;
+  background-color: rgba(169, 49, 199, 0.5);;
 }
 
 .bottom-cards a {
@@ -203,7 +220,7 @@ body {
   font-size: 2rem;
   text-align: center;
   margin-bottom: 2rem;
-  color: #dbc2f8;
+  color: var(--bg);
 }
 
 .flip-card {
@@ -234,9 +251,8 @@ body {
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
-  background-color: #dbc2f8;
-  border-radius: 15px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  background-color: var(--bg);
+  border: 2px solid var(--border);
   text-align: center;
   padding: 1.5rem;
 }
@@ -273,9 +289,8 @@ body {
 
 /* ===== Art Gallery ===== */
 .corkboard {
-  background: url('images/cork-texture.jpeg');
-  border: 12px solid #8B5A2B;
-  border-radius: 12px;
+  background: var(--bg);
+  border: 3px solid var(--border);
   padding: 24px;
   display: flex;
   flex-wrap: wrap;
@@ -299,22 +314,8 @@ body {
 
 .art-pin img {
   width: 220px;
-  border: 10px solid white;
-  border-radius: 8px;
+  border: 2px dashed #ab7ecf;
   display: block;
-}
-
-.pin-circle {
-  width: 20px;
-  height: 20px;
-  background-color: #e43c3c;
-  border-radius: 50%;
-  position: absolute;
-  top: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 2;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 /* ===== Utilities ===== */
@@ -349,8 +350,7 @@ body {
 .zoom-overlay img {
   max-width: 90vw;
   max-height: 90vh;
-  border: 8px solid white;
-  border-radius: 8px;
+  border: 3px solid var(--border);
 }
 
 /* ===== Mobile ===== */
