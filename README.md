@@ -37,4 +37,9 @@ a silly brazilian pixel artist, nerdy web dev and collector of weird consoles :3
   
 ---
 
+![GitHub Stats](https://github-stats-extended.vercel.app/api?username=ashleytarifa&show_icons=true&theme=radical)
+
+![Top Langs](https://github-stats-extended.vercel.app/api/top-langs/?username=ashleytarifa&layout=compact&theme=radical)
+
+---
 > silly but happy to be here ₍ᐢ. ̫.ᐢ₎
