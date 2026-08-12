@@ -34,15 +34,7 @@ a silly brazilian pixel artist, nerdy web dev and collector of weird consoles :3
 - 💭 @ashleytarifa on Discord
 - 🎨 maybe a carrd or art page in the future...? 
 - 💌 working on cool stuff... slowly ;3
-
----
-
-![Ashley’s GitHub stats](https://github-readme-stats.vercel.app/api?username=ashleytarifa&show_icons=true&theme=tokyonight&hide=prs)
-
----
-
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=ashleytarifa&layout=compact&theme=tokyonight)
-
+  
 ---
 
 > silly but happy to be here ₍ᐢ. ̫.ᐢ₎
